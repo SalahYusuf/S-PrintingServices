@@ -943,26 +943,180 @@
       .paper.p2 { right: 8px; top: 125px; width: 175px; }
       .paper.p3 { left: 22px; bottom: 25px; width: 210px; }
     }
+  
+
+    /* EXACT NAVBAR SYNC FROM index.html */
+    .btn {
+          min-height: 46px;
+          border: 0;
+          border-radius: 10px;
+          padding: 12px 17px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 9px;
+          font-size: 0.9rem;
+          font-weight: 800;
+          transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+        }
+
+    .btn:hover {
+          transform: translateY(-2px);
+        }
+
+    .btn-gold {
+          color: var(--maroon-950);
+          background: #d7b565;
+          box-shadow: 0 10px 24px rgba(170, 126, 49, 0.22);
+        }
+
+    .btn-sm {
+          min-height: 39px;
+          padding: 9px 13px;
+          font-size: 0.82rem;
+        }
+
+    .topbar {
+          position: sticky;
+          top: 0;
+          z-index: 80;
+          background: rgba(84, 17, 6, 0.97);
+          color: #fff;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(16px);
+        }
+
+    .nav {
+          min-height: 72px;
+          display: flex;
+          align-items: center;
+          gap: 28px;
+        }
+
+    .brand {
+          min-width: 115px;
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          color: #fff;
+        }
+
+    .brand-logo-image {
+          height: 48px;
+          width: auto;
+          display: block;
+          object-fit: contain;
+          flex: 0 0 auto;
+        }
+
+    .brand-name {
+          display: none;
+          font-family: var(--serif);
+          letter-spacing: 0.05em;
+          font-size: 1.06rem;
+        }
+
+    .nav-links {
+          margin-left: auto;
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          font-size: 0.82rem;
+          font-weight: 700;
+        }
+
+    .nav-links a {
+          opacity: 0.92;
+        }
+
+    .nav-links a:hover {
+          color: #f1d891;
+          opacity: 1;
+        }
+
+    .nav-actions {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+        }
+
+    .menu-btn {
+          display: none;
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          background: rgba(255, 255, 255, 0.08);
+          color: white;
+          width: 43px;
+          height: 43px;
+          border-radius: 10px;
+          font-size: 1.25rem;
+        }
+
+    @media (min-width: 1120px) {
+      .brand-name {
+        display: block;
+      }
+    }
+    
+    @media (max-width: 780px) {
+      .nav {
+        min-height: 66px;
+      }
+    
+      .nav-links,
+      .nav-actions .btn-gold {
+        display: none;
+      }
+    
+      .menu-btn {
+        display: grid;
+        place-items: center;
+        margin-left: auto;
+      }
+    
+      .nav-links.mobile-open {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: 61px;
+        display: grid;
+        gap: 0;
+        padding: 12px;
+        color: var(--maroon-900);
+        background: #fffaf1;
+        border: 1px solid rgba(84,17,6,.18);
+        box-shadow: var(--shadow);
+      }
+    
+      .nav-links.mobile-open a {
+        padding: 12px 8px;
+        border-bottom: 1px solid var(--line);
+      }
+    
+      .nav-links.mobile-open a:last-child {
+        border-bottom: 0;
+      }
+    }
+
   </style>
 </head>
 
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a class="brand" href="#home" aria-label="SPS home">
+      <a class="brand" href="index.html#home" aria-label="SPS home">
         <img class="brand-logo-image" src="assets/sps-logo.png" alt="SPS logo" />
         <span class="brand-name">Salah Printing Service</span>
       </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-        <a href="#home">Home</a>
+        <a href="index.html#home">Home</a>
         <a href="about.html">About Us</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact Us</a>
+        <a href="index.html#resources">Resources</a>
+        <a href="index.html#contact">Contact Us</a>
       </nav>
 
       <div class="nav-actions">
-        <a class="btn btn-gold btn-sm" href="#quote">Get a Quote</a>
+        <a class="btn btn-gold btn-sm" href="index.html#quote">Get a Quote</a>
         <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation">☰</button>
       </div>
     </div>
