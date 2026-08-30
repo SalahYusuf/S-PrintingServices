@@ -249,6 +249,13 @@
       left: 35px;
     }
 
+    .brand-logo-image {
+      width: 47px;
+      height: 48px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
     .brand-name {
       display: none;
       font-family: var(--serif);
@@ -278,15 +285,6 @@
       display: flex;
       align-items: center;
       gap: 9px;
-    }
-
-    .login-link {
-      border: 0;
-      color: #fff;
-      background: transparent;
-      padding: 9px 6px;
-      font-size: 0.82rem;
-      font-weight: 700;
     }
 
     .menu-btn {
@@ -1334,16 +1332,6 @@
       border: 1px solid var(--line);
     }
 
-    .login-message {
-      margin-top: 12px;
-      padding: 10px 12px;
-      display: none;
-      color: var(--green-800);
-      background: #eaf6ee;
-      border: 1px solid #b9dbc4;
-      font-size: .78rem;
-    }
-
     /* ---------------- TOAST ---------------- */
     .toast {
       position: fixed;
@@ -1434,7 +1422,6 @@
       }
 
       .nav-links,
-      .login-link,
       .nav-actions .btn-gold {
         display: none;
       }
@@ -1664,11 +1651,7 @@
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="#home" aria-label="SPS home">
-        <span class="monogram" aria-hidden="true">
-          <span class="s1">S</span>
-          <span class="p">P</span>
-          <span class="s2">S</span>
-        </span>
+        <img class="brand-logo-image" src="assets/sps-logo.png" alt="SPS logo" />
         <span class="brand-name">Salah Printing Service</span>
       </a>
 
@@ -2206,35 +2189,6 @@
     </div>
   </div>
 
-  <!-- LOGIN MODAL -->
-  <div class="modal" id="loginModal" aria-hidden="true">
-    <div class="modal-card small">
-      <div class="modal-head">
-        <strong>Customer Login</strong>
-        <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
-      </div>
-
-      <div class="modal-body">
-        <p style="margin-top:0;color:var(--muted);font-size:.84rem;">
-          Demo portal: enter the same email used when saving an order to view locally stored order requests.
-        </p>
-
-        <form id="loginForm">
-          <div class="field">
-            <label for="loginEmail">Email</label>
-            <input id="loginEmail" type="email" required placeholder="name@student.mmu.edu.my" />
-          </div>
-
-          <button class="btn btn-green" type="submit" style="width:100%;margin-top:12px;">
-            View My Orders
-          </button>
-        </form>
-
-        <div class="login-message" id="loginMessage"></div>
-        <div class="order-history" id="loginOrders"></div>
-      </div>
-    </div>
-  </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -2266,8 +2220,6 @@
 
     const toast = document.getElementById("toast");
     const orderHistory = document.getElementById("orderHistory");
-    const loginOrders = document.getElementById("loginOrders");
-    const loginMessage = document.getElementById("loginMessage");
 
     let currentQuoteId = makeQuoteId();
 
@@ -2447,19 +2399,6 @@
       const name = document.getElementById("contactName").value.trim();
       showToast(`Thanks${name ? `, ${name}` : ""}. Your enquiry was recorded in this demo.`);
       event.target.reset();
-    });
-
-    document.getElementById("loginForm").addEventListener("submit", event => {
-      event.preventDefault();
-      const email = document.getElementById("loginEmail").value.trim().toLowerCase();
-      const orders = getOrders().filter(order => (order.email || "").toLowerCase() === email);
-
-      loginMessage.style.display = "block";
-      loginMessage.textContent = orders.length
-        ? `${orders.length} locally saved order request${orders.length === 1 ? "" : "s"} found.`
-        : "No locally saved orders were found for this email.";
-
-      loginOrders.innerHTML = historyMarkup(orders);
     });
 
     // Modal controls
