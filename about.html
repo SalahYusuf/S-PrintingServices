@@ -1,0 +1,1495 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="About SPS — Salah Printing Service. Business overview, audience, digital strategy, social media approach and measurable goals."
+  />
+  <title>About Us — SPS | Salah Printing Service</title>
+
+  <style>
+    :root {
+      --maroon-950: #3b0b05;
+      --maroon-900: #541106;
+      --maroon-800: #691708;
+      --maroon-700: #7a2011;
+      --cream-50: #fffdf7;
+      --cream-100: #f8f0df;
+      --cream-150: #f2e6d0;
+      --cream-200: #e8d7ba;
+      --gold-500: #c49a4a;
+      --gold-600: #aa7e31;
+      --green-700: #2e6f5d;
+      --green-800: #245848;
+      --ink: #291c18;
+      --muted: #6f625b;
+      --line: rgba(84, 17, 6, 0.17);
+      --white: #fff;
+      --shadow: 0 22px 70px rgba(58, 23, 10, 0.14);
+      --shadow-soft: 0 12px 36px rgba(58, 23, 10, 0.09);
+      --max: 1180px;
+      --serif: Georgia, "Times New Roman", Times, serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(196,154,74,.13), transparent 28rem),
+        linear-gradient(180deg, #fffdf8 0%, #f8f0df 100%);
+      font-family: var(--sans);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+    .container { width: min(calc(100% - 36px), var(--max)); margin-inline: auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      color: white;
+      background: rgba(84,17,6,.97);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      min-width: 110px;
+    }
+
+    .monogram {
+      position: relative;
+      width: 47px;
+      height: 48px;
+      flex: 0 0 auto;
+      font-family: var(--serif);
+      color: #fff;
+    }
+
+    .monogram .p {
+      position: absolute;
+      left: 16px;
+      top: -8px;
+      font-size: 4.1rem;
+      line-height: 1;
+      font-style: italic;
+    }
+
+    .monogram .s1,
+    .monogram .s2 {
+      position: absolute;
+      left: 5px;
+      font-size: 1.05rem;
+      font-style: italic;
+      z-index: 2;
+    }
+
+    .monogram .s1 { top: 3px; }
+    .monogram .s2 { bottom: 3px; left: 35px; }
+
+    .brand-name {
+      display: none;
+      font-family: var(--serif);
+      letter-spacing: .05em;
+      font-size: 1.04rem;
+    }
+
+    .nav-links {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      font-size: .82rem;
+      font-weight: 750;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: #f1d891; }
+
+    .btn {
+      min-height: 43px;
+      border: 0;
+      border-radius: 9px;
+      padding: 10px 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: .84rem;
+      font-weight: 850;
+      transition: .18s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold { color: var(--maroon-950); background: #d7b565; }
+    .btn-maroon { color: #fff; background: var(--maroon-800); }
+    .btn-green { color: #fff; background: var(--green-700); }
+    .btn-outline { color: var(--maroon-800); border: 1px solid rgba(105,23,8,.32); background: transparent; }
+
+    .menu-btn {
+      display: none;
+      margin-left: auto;
+      width: 43px;
+      height: 43px;
+      color: white;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 10px;
+      font-size: 1.2rem;
+    }
+
+    .section { padding: 82px 0; }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--maroon-800);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .72rem;
+      font-weight: 900;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: var(--gold-500);
+    }
+
+    .display {
+      margin: 12px 0 15px;
+      max-width: 860px;
+      color: var(--maroon-900);
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      font-weight: 500;
+      letter-spacing: -.05em;
+      line-height: .98;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    /* Hero */
+    .about-hero {
+      padding: 76px 0 60px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-title {
+      margin: 14px 0 18px;
+      color: var(--maroon-950);
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 7vw, 6.8rem);
+      font-weight: 500;
+      letter-spacing: -.06em;
+      line-height: .9;
+    }
+
+    .hero-title span { color: var(--maroon-700); }
+
+    .hero-copy p {
+      max-width: 690px;
+      color: #62534c;
+      font-size: 1.04rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .hero-board {
+      min-height: 500px;
+      position: relative;
+      background:
+        linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)),
+        repeating-linear-gradient(0deg, transparent 0 39px, rgba(84,17,6,.05) 39px 40px),
+        repeating-linear-gradient(90deg, transparent 0 39px, rgba(84,17,6,.05) 39px 40px),
+        #f6ecd8;
+      border-left: 1px solid rgba(84,17,6,.09);
+    }
+
+    .paper {
+      position: absolute;
+      padding: 18px;
+      background: #fffaf1;
+      border: 1px solid rgba(84,17,6,.15);
+      box-shadow: var(--shadow-soft);
+      color: var(--maroon-900);
+    }
+
+    .paper strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      line-height: 1.05;
+    }
+
+    .paper span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: .75rem;
+    }
+
+    .paper.p1 {
+      width: 235px;
+      top: 54px;
+      left: 38px;
+      transform: rotate(-4deg);
+    }
+
+    .paper.p2 {
+      width: 220px;
+      right: 30px;
+      top: 132px;
+      transform: rotate(5deg);
+    }
+
+    .paper.p3 {
+      width: 250px;
+      left: 110px;
+      bottom: 56px;
+      color: white;
+      background: var(--green-700);
+      transform: rotate(-1deg);
+    }
+
+    .paper.p3 span { color: rgba(255,255,255,.75); }
+
+    .pin {
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      border-radius: 50%;
+      background: var(--gold-500);
+      box-shadow: 0 3px 7px rgba(0,0,0,.18);
+    }
+
+    /* Snapshot */
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 30px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .snapshot {
+      padding: 22px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    .snapshot:last-child { border-right: 0; }
+
+    .snapshot span {
+      display: block;
+      color: var(--muted);
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      font-weight: 850;
+    }
+
+    .snapshot strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--maroon-900);
+      font-family: var(--serif);
+      font-size: 1.22rem;
+      font-weight: 600;
+    }
+
+    /* Cards */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 31px;
+    }
+
+    .card {
+      padding: 26px;
+      background: rgba(255,255,255,.68);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card.dark {
+      color: white;
+      background: var(--maroon-800);
+    }
+
+    .card.green {
+      color: white;
+      background: var(--green-700);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--maroon-900);
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 500;
+      letter-spacing: -.03em;
+    }
+
+    .card.dark h3, .card.green h3 { color: white; }
+    .card p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .card.dark p, .card.green p { color: rgba(255,255,255,.76); }
+
+    .bullet-list {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+    }
+
+    .bullet {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .bullet-mark {
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--maroon-900);
+      background: #eed79a;
+      font-size: .72rem;
+      font-weight: 1000;
+    }
+
+    .bullet strong {
+      display: block;
+      font-size: .84rem;
+    }
+
+    .bullet span {
+      display: block;
+      color: var(--muted);
+      font-size: .77rem;
+      margin-top: 1px;
+    }
+
+    .dark .bullet span, .green .bullet span { color: rgba(255,255,255,.7); }
+
+    /* Research */
+    .research-band {
+      background:
+        linear-gradient(rgba(255,255,255,.54), rgba(255,255,255,.54)),
+        var(--cream-150);
+      border-block: 1px solid var(--line);
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .research-stat {
+      min-height: 178px;
+      padding: 22px;
+      background: #fffaf1;
+      border: 1px solid var(--line);
+    }
+
+    .research-stat .num {
+      color: var(--maroon-800);
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+
+    .research-stat strong {
+      display: block;
+      margin-top: 10px;
+      color: var(--maroon-900);
+      font-size: .88rem;
+    }
+
+    .research-stat p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
+    .source-note {
+      margin-top: 15px;
+      color: #7b6b61;
+      font-size: .68rem;
+    }
+
+    .source-note a {
+      color: var(--green-700);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Audience */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .persona {
+      min-height: 250px;
+      padding: 23px;
+      background: rgba(255,255,255,.68);
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .persona::after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      right: -30px;
+      bottom: -30px;
+      border-radius: 50%;
+      background: rgba(196,154,74,.16);
+    }
+
+    .persona-icon {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--maroon-800);
+      font-size: 1.1rem;
+    }
+
+    .persona h3 {
+      margin: 16px 0 7px;
+      color: var(--maroon-900);
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+    }
+
+    .persona p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    .persona .need {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: #6b554c;
+      font-size: .75rem;
+      font-weight: 750;
+    }
+
+    /* Ecosystem */
+    .ecosystem {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 25px;
+      margin-top: 30px;
+      align-items: stretch;
+    }
+
+    .journey {
+      padding: 27px;
+      background: var(--maroon-800);
+      color: white;
+    }
+
+    .journey h3 {
+      margin: 0 0 18px;
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    .journey-step {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 11px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+
+    .journey-step:last-child { border-bottom: 0; }
+
+    .journey-num {
+      width: 31px;
+      height: 31px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--maroon-900);
+      background: #edd8a1;
+      font-family: var(--serif);
+      font-weight: 700;
+    }
+
+    .journey-step strong { display: block; font-size: .82rem; }
+    .journey-step span { display: block; margin-top: 2px; color: rgba(255,255,255,.67); font-size: .73rem; }
+
+    .channels {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .channel {
+      padding: 22px;
+      background: #fffaf1;
+      border: 1px solid var(--line);
+    }
+
+    .channel.primary {
+      grid-column: 1 / -1;
+      background: var(--green-700);
+      color: white;
+    }
+
+    .channel-tag {
+      display: inline-block;
+      padding: 5px 8px;
+      border-radius: 999px;
+      color: var(--maroon-900);
+      background: #ecd69e;
+      font-size: .62rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .channel h3 {
+      margin: 12px 0 8px;
+      color: var(--maroon-900);
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .channel.primary h3 { color: white; }
+    .channel p { margin: 0; color: var(--muted); font-size: .78rem; }
+    .channel.primary p { color: rgba(255,255,255,.73); }
+
+    /* Content */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .content-card {
+      min-height: 230px;
+      padding: 19px;
+      border: 1px solid var(--line);
+      background: #fffaf1;
+    }
+
+    .content-card .number {
+      color: var(--gold-600);
+      font-family: var(--serif);
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .content-card h3 {
+      margin: 15px 0 6px;
+      color: var(--maroon-900);
+      font-family: var(--serif);
+      font-size: 1.22rem;
+      font-weight: 500;
+    }
+
+    .content-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
+    .example {
+      margin-top: 13px;
+      padding-top: 11px;
+      border-top: 1px solid var(--line);
+      color: #5e4941;
+      font-size: .71rem;
+      font-style: italic;
+    }
+
+    /* Content mockups */
+    .mockups {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .post {
+      aspect-ratio: 1 / 1;
+      padding: 17px;
+      position: relative;
+      overflow: hidden;
+      border: 8px solid #fffaf1;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .post.price {
+      color: #fff;
+      background: var(--maroon-800);
+    }
+
+    .post.guide {
+      color: var(--maroon-900);
+      background: #f5e8ce;
+    }
+
+    .post.fast {
+      color: #fff;
+      background: var(--green-700);
+    }
+
+    .post .post-logo {
+      font-family: var(--serif);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+    }
+
+    .post h4 {
+      margin: 35% 0 8px;
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2.7rem);
+      font-weight: 500;
+      line-height: .95;
+      letter-spacing: -.04em;
+    }
+
+    .post p { margin: 0; max-width: 85%; font-size: .7rem; opacity: .76; }
+
+    .post::after {
+      content: "";
+      width: 110px;
+      height: 110px;
+      border: 18px solid rgba(255,255,255,.09);
+      border-radius: 50%;
+      position: absolute;
+      right: -37px;
+      bottom: -37px;
+    }
+
+    .post.guide::after { border-color: rgba(84,17,6,.08); }
+
+    /* SMART */
+    .smart-table {
+      margin-top: 28px;
+      border: 1px solid var(--line);
+      background: #fffaf1;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 850px;
+    }
+
+    th, td {
+      padding: 15px 16px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      color: white;
+      background: var(--maroon-800);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    td {
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
+    td strong {
+      color: var(--maroon-900);
+      font-size: .79rem;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    /* Scope note */
+    .scope-note {
+      margin-top: 30px;
+      padding: 24px 26px;
+      border-left: 5px solid var(--gold-500);
+      background: rgba(255,255,255,.62);
+    }
+
+    .scope-note strong {
+      display: block;
+      color: var(--maroon-900);
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    .scope-note p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    /* Footer */
+    footer {
+      color: white;
+      background: var(--maroon-950);
+    }
+
+    .footer-top {
+      min-height: 160px;
+      padding: 36px 0;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .footer-brand strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .footer-brand span {
+      display: block;
+      color: rgba(255,255,255,.62);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 17px;
+      flex-wrap: wrap;
+      color: rgba(255,255,255,.7);
+      font-size: .76rem;
+      font-weight: 700;
+    }
+
+    .footer-bottom {
+      padding: 15px 0 22px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: rgba(255,255,255,.45);
+      font-size: .68rem;
+    }
+
+    @media (min-width: 1100px) {
+      .brand-name { display: block; }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .two-col,
+      .ecosystem {
+        grid-template-columns: 1fr;
+      }
+
+      .snapshot-grid { grid-template-columns: repeat(2, 1fr); }
+      .snapshot:nth-child(2) { border-right: 0; }
+      .snapshot:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+
+      .research-grid,
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .content-grid { grid-template-columns: repeat(2, 1fr); }
+      .mockups { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 780px) {
+      .section { padding: 66px 0; }
+
+      .nav-links,
+      .nav .btn-gold {
+        display: none;
+      }
+
+      .menu-btn {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-links.mobile-open {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: 61px;
+        display: grid;
+        gap: 0;
+        padding: 12px;
+        color: var(--maroon-900);
+        background: #fffaf1;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.mobile-open a {
+        padding: 12px 8px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero-board { min-height: 400px; }
+      .paper.p1 { left: 18px; top: 40px; width: 210px; }
+      .paper.p2 { right: 15px; top: 125px; width: 190px; }
+      .paper.p3 { left: 50px; bottom: 35px; width: 220px; }
+
+      .content-grid,
+      .channels {
+        grid-template-columns: 1fr;
+      }
+
+      .channel.primary { grid-column: auto; }
+
+      .mockups { grid-template-columns: 1fr; }
+      .post { aspect-ratio: 1.25 / 1; }
+
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-links { justify-content: flex-start; }
+    }
+
+    @media (max-width: 500px) {
+      .container { width: min(calc(100% - 24px), var(--max)); }
+
+      .snapshot-grid { grid-template-columns: 1fr; }
+      .snapshot {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .snapshot:last-child { border-bottom: 0; }
+
+      .hero-actions { display: grid; }
+      .hero-actions .btn { width: 100%; }
+
+      .hero-board { min-height: 350px; }
+      .paper { transform: none !important; }
+      .paper.p1 { left: 10px; top: 30px; width: 190px; }
+      .paper.p2 { right: 8px; top: 125px; width: 175px; }
+      .paper.p3 { left: 22px; bottom: 25px; width: 210px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="SPS home">
+        <span class="monogram" aria-hidden="true">
+          <span class="s1">S</span>
+          <span class="p">P</span>
+          <span class="s2">S</span>
+        </span>
+        <span class="brand-name">Salah Printing Service</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About Us</a>
+        <a href="index.html#resources">Resources</a>
+        <a href="index.html#contact">Contact Us</a>
+      </nav>
+
+      <a class="btn btn-gold" href="index.html#quote">Get a Quote</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="kicker">About SPS</span>
+          <h1 class="hero-title">Printing built around <span>student life.</span></h1>
+          <p>
+            Salah Printing Service (SPS) is a student-focused printing business serving the MMU
+            Cyberjaya community with straightforward A4 printing, lamination and convenient
+            collection or delivery. Our role is intentionally focused: customers provide their
+            documents; SPS handles the physical print production and fulfilment.
+          </p>
+
+          <p>
+            The brand combines a traditional print service with a digital-first ordering experience.
+            Our website reduces friction at the point of purchase, while social media is used to
+            make pricing, service instructions and time-sensitive updates easy to discover.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-green" href="index.html#quote">Build an Order</a>
+            <a class="btn btn-outline" href="#strategy">See Our Digital Strategy</a>
+          </div>
+        </div>
+
+        <div class="hero-board" aria-label="SPS strategy board">
+          <article class="paper p1">
+            <span class="pin"></span>
+            <strong>Simple Service</strong>
+            <span>Print · Laminate · Deliver</span>
+          </article>
+
+          <article class="paper p2">
+            <span class="pin"></span>
+            <strong>Clear Audience</strong>
+            <span>MMU students, clubs and student organisers</span>
+          </article>
+
+          <article class="paper p3">
+            <span class="pin"></span>
+            <strong>Digital First</strong>
+            <span>Website for conversion. Instagram for discovery, trust and reminders.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:25px;">
+      <div class="container">
+        <div class="snapshot-grid">
+          <div class="snapshot">
+            <span>Business</span>
+            <strong>Salah Printing Service</strong>
+          </div>
+          <div class="snapshot">
+            <span>Assignment Category</span>
+            <strong>Marketing Business</strong>
+          </div>
+          <div class="snapshot">
+            <span>Core Market</span>
+            <strong>MMU Cyberjaya Students</strong>
+          </div>
+          <div class="snapshot">
+            <span>Primary Digital Channel</span>
+            <strong>Instagram + Website</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <span class="kicker">1 · Business Overview</span>
+        <h2 class="display">What SPS actually is.</h2>
+        <p class="lead">
+          SPS is not a graphic-design agency. It is a print-production service that competes on
+          convenience, price clarity and an ordering experience tailored to students.
+        </p>
+
+        <div class="two-col">
+          <article class="card dark">
+            <h3>Our business model</h3>
+            <p>
+              Customers submit completed documents or print-ready files. SPS prints the requested
+              quantity, optionally laminates the output, then fulfils the order through self-pickup
+              or delivery around MMU Cyberjaya.
+            </p>
+
+            <div class="bullet-list">
+              <div class="bullet">
+                <span class="bullet-mark">1</span>
+                <div><strong>A4 Printing</strong><span>Black & white or colour, single- or double-sided.</span></div>
+              </div>
+              <div class="bullet">
+                <span class="bullet-mark">2</span>
+                <div><strong>Lamination</strong><span>Optional protection for selected printed sheets.</span></div>
+              </div>
+              <div class="bullet">
+                <span class="bullet-mark">3</span>
+                <div><strong>Fulfilment</strong><span>Self-pickup or door-to-door delivery around campus.</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Why “Marketing Business”?</h3>
+            <p>
+              The assignment provides only three broad categories. SPS is positioned under
+              <strong>Marketing Business</strong> because the business is built around identifying a
+              specific market, communicating a clear value proposition, reaching that market through
+              digital channels and converting attention into orders.
+            </p>
+
+            <div class="bullet-list">
+              <div class="bullet">
+                <span class="bullet-mark">✓</span>
+                <div><strong>Defined segment</strong><span>MMU Cyberjaya students with recurring printing needs.</span></div>
+              </div>
+              <div class="bullet">
+                <span class="bullet-mark">✓</span>
+                <div><strong>Digital promotion</strong><span>Website + social media communicate prices, convenience and service updates.</span></div>
+              </div>
+              <div class="bullet">
+                <span class="bullet-mark">✓</span>
+                <div><strong>Measurable funnel</strong><span>Reach → profile visit → website click → quote / order request.</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="scope-note">
+          <strong>Important positioning</strong>
+          <p>
+            “Marketing Business” is the assignment classification. The operational service itself
+            remains printing only. SPS does not claim to provide campaign strategy or graphic-design services.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research-band">
+      <div class="container">
+        <span class="kicker">Research Context</span>
+        <h2 class="display">Why a campus-first model is reasonable.</h2>
+        <p class="lead">
+          Our strategy is based on a narrow local market rather than trying to compete as a generic
+          commercial printer across Malaysia.
+        </p>
+
+        <div class="research-grid">
+          <article class="research-stat">
+            <div class="num">12,000+</div>
+            <strong>MMU students across Cyberjaya and Melaka</strong>
+            <p>
+              MMU’s publication portal describes the university as having more than 12,000 students
+              across its two campuses. This is not a Cyberjaya-only figure, so SPS treats it as broad
+              institutional context rather than its addressable market size.
+            </p>
+          </article>
+
+          <article class="research-stat">
+            <div class="num">100+</div>
+            <strong>Clubs and societies in MMU’s wider campus ecosystem</strong>
+            <p>
+              MMU materials describe a large club-and-society ecosystem. This matters because student
+              organisations create recurring demand for printed notices, event materials, schedules
+              and administrative documents.
+            </p>
+          </article>
+
+          <article class="research-stat">
+            <div class="num">30.7m</div>
+            <strong>Social media user identities in Malaysia</strong>
+            <p>
+              Malaysia has very high social-media adoption. For a campus business, that supports a
+              digital-first discovery model instead of relying only on physical posters or word of mouth.
+            </p>
+          </article>
+        </div>
+
+        <p class="source-note">
+          Research basis:
+          <a href="https://e-publication.mmu.edu.my/" target="_blank" rel="noreferrer">MMU Publication</a>,
+          <a href="https://www.mmu.edu.my/wp-content/uploads/2023/10/IntStudentGuide_Updated22092023.pdf" target="_blank" rel="noreferrer">MMU International Student Guide</a>,
+          <a href="https://datareportal.com/reports/digital-2026-malaysia" target="_blank" rel="noreferrer">DataReportal Digital 2026: Malaysia</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="audience">
+      <div class="container">
+        <span class="kicker">4 · Target Audience</span>
+        <h2 class="display">We do not target “everyone”.</h2>
+        <p class="lead">
+          SPS focuses first on MMU Cyberjaya students. Within that market, we design the service around
+          three practical use cases rather than one generic student profile.
+        </p>
+
+        <div class="audience-grid">
+          <article class="persona">
+            <div class="persona-icon">A</div>
+            <h3>Assignment-Driven Student</h3>
+            <p>
+              Needs lecture notes, reports, forms or assignment materials printed close to a deadline.
+              The key value is speed, price clarity and minimal ordering effort.
+            </p>
+            <div class="need">Primary need: fast, predictable printing without unnecessary travel.</div>
+          </article>
+
+          <article class="persona">
+            <div class="persona-icon">C</div>
+            <h3>Club / Committee Member</h3>
+            <p>
+              Handles meeting documents, schedules, certificates, checklists or event materials.
+              Orders may involve more pages or repeated sets.
+            </p>
+            <div class="need">Primary need: reliable repeat orders, quantity handling and convenient collection.</div>
+          </article>
+
+          <article class="persona">
+            <div class="persona-icon">H</div>
+            <h3>Hostel / Convenience Buyer</h3>
+            <p>
+              May have no personal printer or may prefer not to travel solely to print a small number
+              of documents.
+            </p>
+            <div class="need">Primary need: door-to-door convenience for low-friction everyday printing.</div>
+          </article>
+        </div>
+
+        <div class="scope-note">
+          <strong>Research vs. assumption</strong>
+          <p>
+            The existence of student printing demand is supported by Malaysian university printing
+            services and prior campus-printing business projects. The three personas above are SPS
+            working hypotheses and should be validated through a short survey or order data if the
+            business were launched for real.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="strategy">
+      <div class="container">
+        <span class="kicker">2, 3 & 6 · Digital Presence Strategy</span>
+        <h2 class="display">Each channel has one job.</h2>
+        <p class="lead">
+          The website and social platform should not duplicate one another. SPS uses the website as
+          the conversion utility and Instagram as the discovery and trust layer.
+        </p>
+
+        <div class="ecosystem">
+          <div class="journey">
+            <h3>Customer journey</h3>
+
+            <div class="journey-step">
+              <span class="journey-num">1</span>
+              <div><strong>Discover</strong><span>Student sees an SPS post, Story, Reel or shared recommendation.</span></div>
+            </div>
+
+            <div class="journey-step">
+              <span class="journey-num">2</span>
+              <div><strong>Understand</strong><span>Content explains pricing, ordering steps, turnaround and collection options.</span></div>
+            </div>
+
+            <div class="journey-step">
+              <span class="journey-num">3</span>
+              <div><strong>Evaluate</strong><span>The website provides full information and an instant cost estimate.</span></div>
+            </div>
+
+            <div class="journey-step">
+              <span class="journey-num">4</span>
+              <div><strong>Convert</strong><span>Customer submits or saves an order request.</span></div>
+            </div>
+
+            <div class="journey-step">
+              <span class="journey-num">5</span>
+              <div><strong>Return</strong><span>Useful content, updates and easy re-ordering encourage repeat use.</span></div>
+            </div>
+          </div>
+
+          <div class="channels">
+            <article class="channel primary">
+              <span class="channel-tag">Recommended Main Platform</span>
+              <h3>Instagram — awareness + trust</h3>
+              <p>
+                Instagram suits SPS because the assignment needs a mix of posts, Reel and Story content,
+                while the service itself benefits from visual price cards, step-by-step carousels,
+                time-sensitive Stories and short process videos. DataReportal reports 16.1 million
+                Instagram users in Malaysia in late 2025, with ad reach equivalent to 58.4% of adults
+                aged 18+.
+              </p>
+            </article>
+
+            <article class="channel">
+              <span class="channel-tag">Website</span>
+              <h3>Website — conversion</h3>
+              <p>
+                The website answers the questions that block a purchase: what it costs, what SPS prints,
+                how to order, where to collect and how delivery works. The quote calculator turns the
+                website into a utility rather than a static brochure.
+              </p>
+            </article>
+
+            <article class="channel">
+              <span class="channel-tag">Why not only social?</span>
+              <h3>Owned information</h3>
+              <p>
+                A website gives SPS one stable source of truth for pricing and order instructions.
+                Social posts can then point customers back to the same information instead of repeating
+                full details in every caption.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <p class="source-note">
+          Platform context:
+          <a href="https://datareportal.com/reports/digital-2026-malaysia" target="_blank" rel="noreferrer">
+            Digital 2026: Malaysia
+          </a>.
+          Instagram figures are advertising-reach estimates, not monthly active-user counts.
+        </p>
+      </div>
+    </section>
+
+    <section class="section research-band" id="content">
+      <div class="container">
+        <span class="kicker">5 & 6 · Content Strategy</span>
+        <h2 class="display">Content should remove reasons not to order.</h2>
+        <p class="lead">
+          Instead of posting only advertisements, SPS content is divided into four jobs. This creates a
+          more useful social account and gives the team enough variation for the required posts, Reel and Story.
+        </p>
+
+        <div class="content-grid">
+          <article class="content-card">
+            <div class="number">01</div>
+            <h3>Price Clarity</h3>
+            <p>Make the cost easy to understand before a customer sends a message.</p>
+            <div class="example">Example: “A4 B&W from RM0.30 — single vs double-sided explained.”</div>
+          </article>
+
+          <article class="content-card">
+            <div class="number">02</div>
+            <h3>How-To Content</h3>
+            <p>Reduce ordering mistakes by showing the process, file requirements and collection choices.</p>
+            <div class="example">Example carousel: “How to order from SPS in 5 steps.”</div>
+          </article>
+
+          <article class="content-card">
+            <div class="number">03</div>
+            <h3>Convenience & Proof</h3>
+            <p>Show the actual service outcome, collection process or packaging to make SPS feel real and dependable.</p>
+            <div class="example">Example Reel: file received → printed pages → packed order → pickup.</div>
+          </article>
+
+          <article class="content-card">
+            <div class="number">04</div>
+            <h3>Time-Sensitive Updates</h3>
+            <p>Use Stories for operating status, same-day capacity, delivery slots or temporary notices.</p>
+            <div class="example">Example Story: “Orders before 2 PM: collect this evening.”</div>
+          </article>
+        </div>
+
+        <div class="mockups">
+          <article class="post price">
+            <div class="post-logo">SPS · PRICING</div>
+            <h4>A4 B&W<br>from RM0.30</h4>
+            <p>Simple price card designed to be understood in one glance.</p>
+          </article>
+
+          <article class="post guide">
+            <div class="post-logo">SPS · HOW TO ORDER</div>
+            <h4>Print in<br>5 steps.</h4>
+            <p>Saveable carousel explaining the full order process.</p>
+          </article>
+
+          <article class="post fast">
+            <div class="post-logo">SPS · STUDENT CONVENIENCE</div>
+            <h4>Send it.<br>We print it.</h4>
+            <p>Short-form message focusing on speed and convenience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="goals">
+      <div class="container">
+        <span class="kicker">7 · SMART Goals & KPIs</span>
+        <h2 class="display">What success would look like.</h2>
+        <p class="lead">
+          These are proposed targets for the assignment, not claimed historical results. They are designed
+          around a simple funnel: awareness → engagement → website intent → enquiry / order.
+        </p>
+
+        <div class="smart-table">
+          <table>
+            <thead>
+              <tr>
+                <th>SMART Goal</th>
+                <th>Why It Matters</th>
+                <th>Primary KPIs</th>
+                <th>Target</th>
+                <th>Timeframe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Build local awareness</strong><br>Reach MMU-relevant audiences through SPS Instagram content.</td>
+                <td>A new service must first become discoverable before it can generate enquiries.</td>
+                <td>Accounts reached, impressions, follower growth</td>
+                <td>Reach at least 1,500 accounts and gain 100 followers.</td>
+                <td>Within 6 weeks</td>
+              </tr>
+
+              <tr>
+                <td><strong>Create useful engagement</strong><br>Publish content students save or share, not only like.</td>
+                <td>Shares and saves indicate practical value for price lists and ordering guides.</td>
+                <td>Saves, shares, comments, engagement rate</td>
+                <td>Generate at least 60 combined saves + shares across assessed content.</td>
+                <td>Within 6 weeks</td>
+              </tr>
+
+              <tr>
+                <td><strong>Drive website intent</strong><br>Turn social discovery into visits to the quote page.</td>
+                <td>The website is the conversion layer, so traffic from Instagram shows the channels are connected.</td>
+                <td>Profile link clicks, website visits, quote-page visits</td>
+                <td>Generate at least 50 website visits from social content.</td>
+                <td>Within 6 weeks</td>
+              </tr>
+
+              <tr>
+                <td><strong>Generate enquiries / quote actions</strong><br>Convert a portion of interested visitors into measurable intent.</td>
+                <td>Orders are the end goal; quote requests and enquiries are the closest measurable pre-purchase actions.</td>
+                <td>Quote requests, DMs, contact submissions</td>
+                <td>Generate at least 15 combined quote requests or direct enquiries.</td>
+                <td>Within 6 weeks</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="scope-note">
+          <strong>Why these KPIs?</strong>
+          <p>
+            Followers alone are not enough. SPS tracks the full path from reach to action. Saves and
+            shares test whether content is useful; website visits test whether social content creates
+            intent; enquiries and quote requests test whether that intent is commercial.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research-band">
+      <div class="container">
+        <span class="kicker">What We Deliberately Leave Out</span>
+        <h2 class="display" style="font-size:clamp(2.3rem,4vw,4rem);">This is still an About page.</h2>
+        <p class="lead">
+          We use the About page to explain the business, market, audience and digital strategy.
+          We do not put the group-collaboration reflection here because that belongs in the assessment
+          presentation rather than the public-facing business website.
+        </p>
+
+        <div class="two-col">
+          <article class="card">
+            <h3>Included here</h3>
+            <p>
+              Business overview and category, website purpose, recommended social platform, target
+              audience, content strategy, rationale and SMART goals/KPIs.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Kept for presentation</h3>
+            <p>
+              The detailed website walkthrough, screenshots of every assessed social post and the
+              group collaboration reflection are better presented in the video/slides, where the
+              lecturer explicitly asks for them.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <span class="monogram" aria-hidden="true">
+          <span class="s1">S</span>
+          <span class="p">P</span>
+          <span class="s2">S</span>
+        </span>
+        <div>
+          <strong>Salah Printing Service</strong>
+          <span>Fast service · Quality print · Fair price</span>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="index.html#resources">Resources</a>
+        <a href="index.html#quote">Get a Quote</a>
+        <a href="index.html#contact">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      © <span id="year"></span> SPS · Assignment website prototype
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("mobile-open");
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("mobile-open"));
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
