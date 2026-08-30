@@ -1,0 +1,149 @@
+/* Navbar parity override — copied from the working index.html */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(84, 17, 6, 0.97);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.topbar .container.nav {
+  width: min(calc(100% - 36px), var(--max));
+  margin-inline: auto;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.topbar .brand {
+  min-width: 115px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.topbar .brand-logo-image {
+  height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.topbar .brand-name {
+  display: none;
+  font-family: var(--serif);
+  letter-spacing: 0.05em;
+  font-size: 1.06rem;
+}
+
+.topbar .nav-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.topbar .nav-links a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.92;
+}
+
+.topbar .nav-links a:hover {
+  color: #f1d891;
+  opacity: 1;
+}
+
+.topbar .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.topbar .btn {
+  min-height: 46px;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.topbar .btn:hover {
+  transform: translateY(-2px);
+}
+
+.topbar .btn-gold {
+  color: var(--maroon-950);
+  background: #d7b565;
+  box-shadow: 0 10px 24px rgba(170, 126, 49, 0.22);
+}
+
+.topbar .btn-sm {
+  min-height: 39px;
+  padding: 9px 13px;
+  font-size: 0.82rem;
+}
+
+.topbar .menu-btn {
+  display: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  width: 43px;
+  height: 43px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 1120px) {
+  .topbar .brand-name { display: block; }
+}
+
+@media (max-width: 780px) {
+  .topbar .container.nav { min-height: 66px; }
+
+  .topbar .nav-links,
+  .topbar .nav-actions .btn-gold {
+    display: none;
+  }
+
+  .topbar .menu-btn {
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+  }
+
+  .topbar .nav-links.mobile-open {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 61px;
+    display: grid;
+    gap: 0;
+    padding: 12px;
+    color: var(--maroon-900);
+    background: #fffaf1;
+    border: 1px solid rgba(84,17,6,.18);
+    box-shadow: var(--shadow);
+  }
+
+  .topbar .nav-links.mobile-open a {
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .topbar .nav-links.mobile-open a:last-child { border-bottom: 0; }
+}
