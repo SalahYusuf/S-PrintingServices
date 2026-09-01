@@ -849,6 +849,19 @@
       font-size: .68rem;
     }
 
+    .footer-logo-image {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     @media (min-width: 1100px) {
       .brand-name { display: block; }
     }
@@ -1612,11 +1625,12 @@
   <footer>
     <div class="container footer-top">
       <div class="footer-brand">
-        <span class="monogram" aria-hidden="true">
-          <span class="s1">S</span>
-          <span class="p">P</span>
-          <span class="s2">S</span>
-        </span>
+        <img
+          class="footer-logo-image"
+          src="assets/sps-logo.png"
+          alt="SPS logo"
+        />
+
         <div>
           <strong>Salah Printing Service</strong>
           <span>Fast service · Quality print · Fair price</span>
